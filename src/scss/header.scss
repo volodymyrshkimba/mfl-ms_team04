@@ -1,1 +1,144 @@
+.header-nav {
+  display: none;
+  @include media(desktop) {
+    display: block;
+  }
+}
 
+.header-nav-list {
+  @include media(desktop) {
+    display: flex;
+    gap: 28px;
+  }
+}
+
+.header-nav-link {
+  @include media(desktop) {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}
+
+.header-section {
+  height: 100%;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px 32px 16px 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px 0 rgba(43, 36, 66, 0.25);
+  background: linear-gradient(
+    360deg,
+    rgba(156, 151, 226, 0.8) 0%,
+    rgba(241, 242, 252, 0.8) 63.4%
+  );
+  @include media(desktop) {
+    max-width: 1032px;
+    padding: 8px 24px;
+    border-radius: 0 0 24px 24px;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-logo-text {
+  max-width: 119px;
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 130%;
+  background: linear-gradient(90deg, #609 0%, #932a81 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-burger {
+  @include media(to-desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+  }
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+// MOBILE MENU STYLES
+
+@include media(to-desktop) {
+  .mob-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    backdrop-filter: blur(2px);
+    background: rgba(45, 40, 61, 0.7);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .mob-menu {
+    height: 100%;
+    max-width: 243px;
+    margin-left: auto;
+    border-radius: 24px 0 0 24px;
+    background-color: #6650ad;
+    position: relative;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mob-menu-close-btn {
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 42px;
+    right: 32px;
+  }
+
+  .mob-menu-nav-list {
+    text-align: center;
+  }
+  .mob-menu-nav-item:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  .mob-menu-nav-link {
+    font-weight: 600;
+    font-size: 20px;
+    color: #f1f2fc;
+  }
+
+  .mob-menu-overlay.mob-menu-is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@include media(desktop) {
+  .mob-menu-overlay {
+    display: none;
+  }
+}
