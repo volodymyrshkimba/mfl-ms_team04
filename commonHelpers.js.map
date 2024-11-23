@@ -1,1 +1,1 @@
-{"version":3,"file":"commonHelpers.js","sources":["../src/js/gallery.js"],"sourcesContent":["import Swiper from 'swiper';\n\nimport 'swiper/css';\n\nconst gallerySwiper = new Swiper('.gallery-swiper', {\n  loop: true,\n  slidesPerView: 1.5,\n});\n"],"names":["Swiper"],"mappings":"svBAIsB,IAAIA,EAAO,kBAAmB,CAClD,KAAM,GACN,cAAe,GACjB,CAAC"}
+{"version":3,"file":"commonHelpers.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
