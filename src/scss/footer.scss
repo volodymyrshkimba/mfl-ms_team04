@@ -1,1 +1,49 @@
+// _________ first mobile
+.footer-general-page-mobile {
+  color: #381c4f;
+  background-color: (360deg, #b5b5ec 0%, #f1f2fc 100%);
+}
+.container-general-page-footer {
+  display: flex;
+  width: 100vw;
+  padding: 24px 10px;
+}
+// _________general button mobile 320
+.footer-button-game-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 126px;
+  height: 29px;
+  padding: 9px 13px;
+  border-radius: 8px;
+  border: 1px solid white;
+}
 
+.game-button {
+  background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
+  box-shadow: 0 0 32px 0 #654fab;
+  color: #381c4f;
+}
+.game-button:hover {
+  background: linear-gradient(90deg, #609 0%, #932a81 100%);
+  box-shadow: 0 0 56px 8px #b5b5ec;
+  color: white;
+}
+.footer-list-general-page {
+  display: flex;
+}
+
+// ____________1200
+@include media(desktop) {
+  .container-general-page-footer {
+    display: flex;
+    padding: 10px 24px;
+    max-width: 1032px;
+  }
+  .footer-wrapper-link {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
