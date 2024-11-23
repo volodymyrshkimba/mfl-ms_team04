@@ -19,45 +19,55 @@
   @include font(24, 31.2);
 }
 
-.content {
-  position: relative;
-}
-.marquee {
-  position: absolute;
-  right: -800px;
-  left: 0;
-  width: 1200px;
-  overflow: hidden;
-  padding: 50px 0;
+@include media(to-desktop) {
+  .gallery-content {
+    display: none;
+  }
 }
 
-.marquee__inner {
-  display: flex;
-  transform: rotate(-3deg);
-}
-
-.marquee__line {
-  background-color: transparent;
-  flex-shrink: 0;
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: calc(100% / 3);
-  white-space: nowrap;
-  animation-name: marqueeLine;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes marqueeLine {
-  from {
-    transform: translateX(20%);
+@include media(desktop) {
+  .gallery-content {
+    position: relative;
+  }
+  .marquee {
+    position: absolute;
+    right: -800px;
+    left: 0;
+    width: 1200px;
+    overflow: hidden;
+    padding: 50px 0;
   }
 
-  to {
-    transform: translateX(180%);
+  .marquee__inner {
+    display: flex;
+    transform: rotate(-3deg);
+    box-shadow: inset 0 0 20px 0 #6650ad;
+    background: $_bg_light_purple;
+    overflow: hidden;
+  }
+
+  .marquee__line {
+    background-color: transparent;
+    @include gradient-text;
+    font-weight: 600;
+    @include font(20, 26);
+    flex-shrink: 0;
+    margin-right: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    white-space: nowrap;
+    animation: marqueeLine 10s linear infinite;
+  }
+
+  @keyframes marqueeLine {
+    from {
+      transform: translateX(-320%);
+    }
+
+    to {
+      transform: translateX(5%);
+    }
   }
 }
