@@ -1,0 +1,63 @@
+.gallery-container {
+  max-width: 320px;
+  padding-top: 40px;
+  padding-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url('../img/gallery/bg-ellipse@1x.png') no-repeat center top,
+    url('../img/gallery/bg-ellipse-bottom@1x.png') no-repeat center bottom;
+  @include media(desktop) {
+    max-width: 1200px;
+  }
+}
+
+.gallery-title {
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  @include font(24, 31.2);
+}
+
+.content {
+  position: relative;
+}
+.marquee {
+  position: absolute;
+  right: -800px;
+  left: 0;
+  width: 1200px;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.marquee__inner {
+  display: flex;
+  transform: rotate(-3deg);
+}
+
+.marquee__line {
+  background-color: transparent;
+  flex-shrink: 0;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: calc(100% / 3);
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(20%);
+  }
+
+  to {
+    transform: translateX(180%);
+  }
+}
