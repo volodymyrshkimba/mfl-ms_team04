@@ -1,6 +1,7 @@
 //_____________ mobile first
 
 .bg-color {
+  width: 100vw;
   font-family: 'Domine', 'Signika', sans-serif;
   background-color: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
   color: #381c4f;
@@ -38,7 +39,12 @@
 .home-link a {
   margin-right: 8px;
 }
-
+.text-terms-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
 // .terms-container {
 // }
 // .item-terms {
@@ -82,7 +88,7 @@
 // _____________320
 .footer-rules-mobile {
   background-color: linear-gradient(90deg, #609 0%, #932a81 100%);
-  color: $_white_color;
+  color: white;
 }
 .container-footer-rules {
   display: flex;
@@ -100,7 +106,7 @@
 .game-rules-button:hover {
   background: linear-gradient(90deg, #609 0%, #932a81 100%);
   box-shadow: 0 0 56px 8px #b5b5ec;
-  color: $_White_color; // there will be fill icon
+  color: white; // there will be fill icon
 }
 // ___________________1200
 @include media(desktop) {
