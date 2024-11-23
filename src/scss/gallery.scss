@@ -1,0 +1,16 @@
+.gallery-container {
+  max-width: 320px;
+  padding-top: 40px;
+  padding-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url('../img/gallery/bg-ellipse@1x.png') no-repeat;
+}
+
+.gallery-title {
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  @include font(24, 31.2);
+}

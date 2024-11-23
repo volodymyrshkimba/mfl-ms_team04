@@ -29,3 +29,20 @@ screen types:
 
   line-height: math.div(math.round($result * 100), 100);
 }
+
+@mixin gradient-text {
+  background: linear-gradient(90deg, #609 0%, #932a81 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin hover-for-light-button {
+  background: linear-gradient(90deg, #609 0%, #932a81 100%);
+  box-shadow: 0 0 56px 8px #b5b5ec;
+}
+
+@mixin hover-for-dark-button {
+  background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
+  box-shadow: 0 0 32px 0 #654fab;
+}

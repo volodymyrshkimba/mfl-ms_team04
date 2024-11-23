@@ -1,1 +1,53 @@
+.hero-container {
+  max-width: 320px;
+  padding-top: 320px;
+  padding-bottom: 389px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url('../img/hero/hero-bg-game-trailer@1x.png') no-repeat top 120px
+      center,
+    url('../img/hero/hero-bg-phones@1x.png') no-repeat center bottom,
+    url('../img/hero/hero-bg-ellipse@1x.png') no-repeat center bottom;
+  @include media(desktop) {
+    max-width: 1200px;
+    padding: 360px 84px 77px;
+    background: url('../img/hero/hero-bg-game-trailer-desktop@1x.png') no-repeat
+        84px 96px,
+      url('../img/hero/hero-bg-phones-desktop@1x.png') no-repeat left 551px
+        bottom,
+      url('../img/hero/hero-bg-ellipse-desktop@1x.png') no-repeat left 551px
+        bottom;
+  }
+}
 
+.hero-content {
+  padding: 0 16px;
+  @include media(desktop) {
+    padding: 0;
+  }
+}
+
+.hero-title {
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  @include font(24, 31.2);
+  color: #e6e7f9;
+  margin-bottom: 20px;
+  @include media(desktop) {
+    max-width: 449px;
+    margin-bottom: 32px;
+    @include font(32, 41.6);
+  }
+}
+
+.hero-link {
+  display: block;
+  width: 152px;
+  height: 47px;
+  background: url('../img/google-play-icon.png') no-repeat 13px center / 25px
+      28px,
+    linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
+  box-shadow: 0 0 20px 1px rgba(43, 36, 66, 0.25);
+  border-radius: 8px;
+  padding: 9px 0px 9px 47px;
+}
