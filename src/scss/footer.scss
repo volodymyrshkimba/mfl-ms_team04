@@ -1,49 +1,133 @@
-// _________ first mobile
-.footer-general-page-mobile {
-  color: #381c4f;
-  background-color: (360deg, #b5b5ec 0%, #f1f2fc 100%);
-}
+// _________ first desktop
 .container-general-page-footer {
-  display: flex;
-  width: 100vw;
-  padding: 24px 10px;
+  @include media(desktop) {
+    max-width: 1200px;
+    padding: 0px 84px 0px 84px;
+    margin: 0 auto;
+  }
 }
-// _________general button mobile 320
+.footer-container {
+  @include media(desktop) {
+    // width: 1032px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+  }
+}
+// ________________________________mob
+// .footer-container {
+//   @include media(mobile) {
+//     display: flex;
+//     min-width: 320px;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 10px;
+//     padding: 10px 5px;
+
+//     flex-direction: column;
+//   }
+// }
+.footer-general-page-mobile {
+  @include media(desktop) {
+    border-radius: 24px 24px 0 0;
+    background: linear-gradient(
+      0deg,
+      rgba(168, 160, 229, 0.8) 0%,
+      rgba(241, 242, 252, 0.8) 63.4%
+    );
+  }
+}
+// .footer-general-page-mobile {
+//   @include media(mobile) {
+//     background: linear-gradient(
+//       0deg,
+//       rgba(168, 160, 229, 0.8) 0%,
+//       rgba(241, 242, 252, 0.8) 63.4%
+//     );
+//   }
+// }
+.png-icon {
+  width: 25px;
+  height: 28px;
+  margin-right: 13px;
+}
+
+.footer-wrapper-link {
+  @include media(desktop) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+// .rewers-wrapper {
+//   @include media(mobile) {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     flex-direction: column-reverse;
+//     align-items: center;
+//     gap: 5px;
+//   }
+// }
+// .footer-wrapper-link {
+//   @include media(mobile) {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 5px;
+//   }
+// }
+
 .footer-button-game-container {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 126px;
-  height: 29px;
-  padding: 9px 13px;
-  border-radius: 8px;
-  border: 1px solid white;
 }
 
 .game-button {
-  background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
-  box-shadow: 0 0 32px 0 #654fab;
-  color: #381c4f;
-}
-.game-button:hover {
+  display: flex;
   background: linear-gradient(90deg, #609 0%, #932a81 100%);
   box-shadow: 0 0 56px 8px #b5b5ec;
-  color: white;
+  padding: 9px 13px;
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
+}
+.button-text {
+  width: 92px;
+  height: 29px;
+  fill: white;
+  transition: fill 0.3s, text-shadow 0.3s;
+}
+
+.game-button:hover {
+  background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
+  box-shadow: 0 0 32px 0 #654fab;
 }
 .footer-list-general-page {
   display: flex;
 }
 
-// ____________1200
-@include media(desktop) {
-  .container-general-page-footer {
-    display: flex;
-    padding: 10px 24px;
-    max-width: 1032px;
-  }
-  .footer-wrapper-link {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.rule {
+  text-decoration: underline;
+}
+.rule:hover {
+  @include gradient-text;
+}
+// .container-general-page-footer {
+//   @include media(mobile) {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100vw;
+//     padding: 24px 10px;
+//   }
+// }
+.game-button:hover {
+  @include media(mobile) {
+    // border: 1px solid white;
   }
 }
