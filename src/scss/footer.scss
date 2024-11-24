@@ -1,8 +1,10 @@
 // _________ first desktop
 .container-general-page-footer {
-  max-width: 1200px;
-  padding: 0px 84px 0px 0px;
-  margin: 0 auto;
+  @include media(desktop) {
+    max-width: 1200px;
+    padding: 0px 84px 0px 84px;
+    margin: 0 auto;
+  }
 }
 .footer-container {
   @include media(desktop) {
@@ -13,9 +15,21 @@
     padding: 10px 40px;
   }
 }
+// ________________________________mob
+// .footer-container {
+//   @include media(mobile) {
+//     display: flex;
+//     min-width: 320px;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 10px;
+//     padding: 10px 5px;
+
+//     flex-direction: column;
+//   }
+// }
 .footer-general-page-mobile {
   @include media(desktop) {
-    // color: #381c4f;
     border-radius: 24px 24px 0 0;
     background: linear-gradient(
       0deg,
@@ -24,6 +38,15 @@
     );
   }
 }
+// .footer-general-page-mobile {
+//   @include media(mobile) {
+//     background: linear-gradient(
+//       0deg,
+//       rgba(168, 160, 229, 0.8) 0%,
+//       rgba(241, 242, 252, 0.8) 63.4%
+//     );
+//   }
+// }
 .png-icon {
   width: 25px;
   height: 28px;
@@ -37,6 +60,24 @@
     gap: 5px;
   }
 }
+// .rewers-wrapper {
+//   @include media(mobile) {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     flex-direction: column-reverse;
+//     align-items: center;
+//     gap: 5px;
+//   }
+// }
+// .footer-wrapper-link {
+//   @include media(mobile) {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 5px;
+//   }
+// }
 
 .footer-button-game-container {
   display: inline-flex;
@@ -64,20 +105,27 @@
   background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
   box-shadow: 0 0 32px 0 #654fab;
 }
-.game-button :hover.button-text {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  fill: #381c4f;
-}
 .footer-list-general-page {
   display: flex;
 }
 
-.container-general-page-footer {
-  @include media(mobile) {
-    width: 100vw;
-    padding: 24px 10px;
-  }
+.rule {
+  text-decoration: underline;
 }
+.rule:hover {
+  @include gradient-text;
+}
+// .container-general-page-footer {
+//   @include media(mobile) {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100vw;
+//     padding: 24px 10px;
+//   }
+// }
 .game-button:hover {
   @include media(mobile) {
     // border: 1px solid white;

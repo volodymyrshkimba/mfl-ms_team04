@@ -21,6 +21,7 @@
 <rect x="39.5" y="39.5" width="39" height="39" rx="19.5" transform="rotate(-180 39.5 39.5)" stroke="#381C4F"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.762 15.92a1.126 1.126 0 1 0-1.59-1.59l-4.877 4.875L9.5 20l.795.795 4.875 4.875a1.125 1.125 0 0 0 1.592-1.59l-2.956-2.955h15.569a1.125 1.125 0 1 0 0-2.25H13.806l2.956-2.955Z" fill="#381C4F"/>
 </symbol>
+
 <symbol  id="arrow-right" viewBox="0 0 40 40"  >
 <rect x=".5" y=".5" width="39" height="39" rx="19.5" fill="#D1D2F4" fill-opacity=".5"/>
 <rect x=".5" y=".5" width="39" height="39" rx="19.5" stroke="#381C4F"/>

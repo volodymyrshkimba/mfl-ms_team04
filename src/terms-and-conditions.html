@@ -14,21 +14,21 @@
     />
   </head>
   <body class="bg-color">
-    <div class="container-rules">
+    <div class="container-rules-page">
       <!-- header -->
       <header class="navigate-home">
         <a href="index.html" class="home-link">
           <svg class="page-additional-arrow-icon" width="40" height="40">
-            <use href="sprite.svg#arrow-left"></use>
+            <use href="./img/sprite.svg#arrow-left"></use>
           </svg>
-          Back to Home
+          Home
         </a>
       </header>
 
       <!-- main -->
-      <main class="container-terms">
-        <ul class="list-terms">
-          <li class="item-terms">
+      <main class="terms-container">
+        <ul>
+          <li class="text-terms-container">
             <h2 class="articles">Terms & Conditions</h2>
             <p class="text-terms">
               These terms and conditions apply to the Merge Farm Life: Mansion
@@ -109,7 +109,7 @@
 
           <!-- <h2>Responsibility</h2> -->
            <ul>
-          <li class="item-terms">
+          <li>
             <p class="text-terms">
               Please be aware that the Service Provider does not assume
               responsibility for certain aspects. Some functions of the
@@ -173,7 +173,7 @@
 
         <!-- second container -->
          <ul>
-          <li class="item-terms">
+          <li class="text-terms-container">
         <h2 class="articles">Changes to These Terms and Conditions</h2>
         <p class="text-terms">
           The Service Provider may periodically update their Terms and
@@ -183,13 +183,13 @@
         </p>
         </li>
 
-        <li class="item-terms">
+        <li class="">
         <p class="text-terms">
           These terms and conditions are effective as of 2024-11-08.
         </p>
         </li>
 
-        <li  class="item-terms">
+        <li  class="text-terms-container">
         <h2 class="articles">Contact Us</h2>
         <p class="text-terms">
           If you have any questions or suggestions about the Terms and
@@ -199,34 +199,41 @@
         </li>
         </ul>
       </main>
+<!-- footer -->
+    <!-- <div class="container-general-page-footer"> -->
+    <footer class="rules-desktop-wrapper">
+      <div class="footer-container-wrapper">
+        <!-- ___________________________ -->
+        <!-- <div class="footer-content"> -->
+          <div class="footer-button-game-container">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.enjoysports.merge.farm.life.merge.games"
+              class="game-button-rules"
+            >
+              <img
+                src="../img/google-play-icon.png"
+                alt="Icon"
+                class="png-icon"
+              />
 
-      <!-- footer -->
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-content">
-            <div class="rules-button-game-container">
-        <a
-          href="https://play.google.com/store/apps/details?id=com.enjoysports.merge.farm.life.merge.games"
-          class="game-button-rules"
-        >
-          <img src="../img/google-play-icon.png" alt="Icon" class="png-icon" />
-          <svg class="button-text-rules">
-            <use href="../img/sprite.svg#google-play-text"></use>
-          </svg>
-        </a>
-      </div>
-            <div class="rules">
-              <a href="privacy-policy.html" class="rule">Privacy Policy</a>
-              <a href="terms-and-conditions.html" class="rule"
-                >Terms and Conditions</a
-              >
-            </div>
+              <svg class="button-text">
+                <use href="../img/sprite.svg#google-play-text"></use>
+              </svg>
+            </a>
           </div>
           <p class="rights">
             &copy; 2024 greatadventurepro.com, All rights reserved
           </p>
-        </div>
+          <div class="rules-wrapper">
+            <a href="privacy-policy.html" class="rule-page">Privacy Policy</a>
+            <a href="terms-and-conditions.html" class="rule-page"
+              >Terms and Conditions</a
+            >
+          </div>
+        <!-- </div> -->
       </footer>
     </div>
+ </div>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
