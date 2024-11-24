@@ -1,1 +1,97 @@
+.adv-container {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 16px;
+  background: url('../img/advantages/bg-ellipse@1x.png') no-repeat center bottom,
+    linear-gradient(180deg, #8a9ad4 0%, #6650ad 100%);
+  @include media(desktop) {
+    max-width: 1200px;
+    padding: 100px 84px 80px;
+    background: url('../img/advantages/bg-ellipse-decktop@1x.png') no-repeat
+        center bottom,
+      linear-gradient(180deg, #8a9ad4 0%, #6650ad 100%);
+  }
+}
 
+.adv-title {
+  text-align: center;
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  @include font(24, 31.2);
+  margin-bottom: 32px;
+  @include media(desktop) {
+    @include font(32, 41.6);
+    margin-bottom: 80px;
+  }
+}
+
+.adv-item {
+  height: 184px;
+  box-shadow: 0 4px 40px 0 rgba(43, 36, 66, 0.25);
+  border-radius: 40px;
+  background: url('../img/advantages/bg-card@1x.png') no-repeat top -35px left -15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include media(desktop) {
+    max-width: 328px;
+    background: url('../img/advantages/bg-card-desktop@1x.png') no-repeat top -35px
+      left -40px;
+  }
+}
+
+.adv-info {
+  max-width: 256px;
+}
+
+.adv-item-title {
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  margin-bottom: 16px;
+  max-width: 188px;
+  @include font(18, 23.4);
+  @include gradient-text;
+}
+
+.adv-item-descr {
+  @include font(16, 20.8);
+  color: #3a2576;
+}
+
+.adv-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.adv-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.icon-tool {
+  top: -8px;
+  right: -7px;
+}
+
+.icon-gloves {
+  top: -13px;
+  right: -16px;
+}
+
+.icon-light {
+  top: -11px;
+  right: -3px;
+}
+
+.icon-lamp {
+  top: -24px;
+  right: -6px;
+}
+
+.icon-star {
+  top: -15px;
+  right: -14px;
+}
