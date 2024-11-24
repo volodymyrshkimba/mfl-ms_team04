@@ -1,1 +1,0 @@
-{"version":3,"file":"main-73f9e7e5.js","sources":["../../src/js/gallery.js"],"sourcesContent":["import Swiper from 'swiper';\n\nimport 'swiper/css';\n\nconst gallerySwiper = new Swiper('.gallery-swiper', {\n  loop: true,\n  slidesPerView: 1.5,\n});\n"],"names":["Swiper"],"mappings":"+uBAIsB,IAAIA,EAAO,kBAAmB,CAClD,KAAM,GACN,cAAe,GACjB,CAAC"}
