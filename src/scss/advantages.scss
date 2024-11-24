@@ -105,6 +105,10 @@
 
 .adv-item-descr {
   @include font(16, 20.8);
+  @include media(desktop) {
+    font-weight: 500;
+  }
+
   color: #3a2576;
 }
 

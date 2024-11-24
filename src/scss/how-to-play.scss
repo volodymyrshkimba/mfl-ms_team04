@@ -1,1 +1,93 @@
+.htp-container {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 40px 360px;
+  background: url('../img/how-to-play/bg-ellipse@1x.png') no-repeat center top,
+    url('../img/how-to-play/bg-phones-phone@1s.png') no-repeat center bottom,
+    linear-gradient(180deg, #6650ad 0%, #7876c1 38.4%, #8a9bd4 100%);
+  @include media(desktop) {
+    max-width: 1200px;
+    padding: 100px 0 28px;
+    background: url('../img/how-to-play/bg-ellipse-desktop-top@1x.png')
+        no-repeat center top,
+      url('../img/how-to-play/bg-phones-desktop@1x.png') no-repeat top 150px
+        right 30px,
+      url('../img/how-to-play/bg-ellipse-desktop-phones@1x.png') no-repeat top
+        80px right 10px,
+      linear-gradient(180deg, #6650ad 0%, #7876c1 38.4%, #8a9bd4 100%);
+  }
+}
 
+.htp-title {
+  text-align: center;
+  margin-bottom: 32px;
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  @include font(24, 31.2);
+  @include media(desktop) {
+    @include font(32, 41.6);
+    margin-bottom: 8px;
+  }
+}
+
+.htp-list {
+  @include media(desktop) {
+    padding: 80px 524px 52px 172px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+.htp-item {
+  height: 173px;
+  padding: 24px 32px;
+  background: url('../img/how-to-play/card-bg@1x.png') no-repeat -40px -35px;
+  box-shadow: 0 4px 40px 0 rgba(43, 36, 66, 0.25);
+  border-radius: 32px;
+  position: relative;
+  @include media(desktop) {
+    max-width: 240px;
+  }
+}
+
+.htp-item:not(:last-child) {
+  margin-bottom: 24px;
+  @include media(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.htp-item-title {
+  padding-left: 52px;
+  margin-bottom: 16px;
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  @include font(18, 23.4);
+  @include gradient-text;
+}
+
+.htp-item-descr {
+  font-size: 16px;
+  line-height: 130%;
+  @include font(16, 20.8);
+  color: #3a2576;
+}
+
+.htp-item-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  @include font(32, 41.6);
+  color: #e6e7f9;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #609 0%, #932a81 100%);
+}
