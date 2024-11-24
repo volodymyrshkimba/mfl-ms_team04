@@ -26,6 +26,16 @@
   }
 }
 
+.adv-list {
+  @include media(desktop) {
+    max-height: 793px;
+    background: url('../img/advantages/line1.png') no-repeat 502px 29px,
+      url('../img/advantages/line2.png') no-repeat 294px 253px,
+      url('../img/advantages/line3.png') no-repeat 319px 360px,
+      url('../img/advantages/line4.png') no-repeat 559px 547px;
+  }
+}
+
 .adv-item {
   height: 184px;
   box-shadow: 0 4px 40px 0 rgba(43, 36, 66, 0.25);
@@ -37,9 +47,46 @@
   justify-content: center;
   align-items: center;
   @include media(desktop) {
-    max-width: 328px;
+    width: 328px;
     background: url('../img/advantages/bg-card-desktop@1x.png') no-repeat top -35px
       left -40px;
+  }
+}
+
+.adv-item:not(:last-child) {
+  margin-bottom: 16px;
+  @include media(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.adv-item:nth-child(1) {
+  @include media(desktop) {
+    transform: translate(176px, 0);
+  }
+}
+
+.adv-item:nth-child(2) {
+  @include media(desktop) {
+    transform: translate(616px, -36px);
+  }
+}
+
+.adv-item:nth-child(3) {
+  @include media(desktop) {
+    transform: translate(0px, -64px);
+  }
+}
+
+.adv-item:nth-child(4) {
+  @include media(desktop) {
+    transform: translate(704px, -96px);
+  }
+}
+
+.adv-item:nth-child(5) {
+  @include media(desktop) {
+    transform: translate(264px, -128px);
   }
 }
 
@@ -59,10 +106,6 @@
 .adv-item-descr {
   @include font(16, 20.8);
   color: #3a2576;
-}
-
-.adv-item:not(:last-child) {
-  margin-bottom: 16px;
 }
 
 .adv-icon {
