@@ -8,6 +8,12 @@
     url('../img/gallery/bg-ellipse-bottom@1x.png') no-repeat center bottom;
   @include media(desktop) {
     max-width: 1200px;
+    padding-top: 232px;
+    padding-bottom: 71px;
+    background: url('../img/gallery/bg-ellipse-top-desktop@1x.png') no-repeat
+        right top,
+      url('../img/gallery/bg-ellipse-center-desktop@1x.png') no-repeat center
+        center;
   }
 }
 
@@ -23,19 +29,32 @@
   .gallery-content {
     display: none;
   }
+  .desktop-swiper {
+    display: none;
+  }
 }
 
 @include media(desktop) {
+  .phone-swiper {
+    display: none;
+  }
+
+  .gallery-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
   .gallery-content {
     position: relative;
   }
+
   .marquee {
     position: absolute;
     right: -800px;
     left: 0;
     width: 1200px;
     overflow: hidden;
-    padding: 50px 0;
+    padding: 41px 0;
   }
 
   .marquee__inner {
