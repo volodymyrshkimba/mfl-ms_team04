@@ -25,17 +25,69 @@
     );
   }
 }
+// .png-icon {
+//   width: 25px;
+//   height: 28px;
+//   margin-right: 13px;
+// }
+// .button-text {
+//   width: 92px;
+//   height: 29px;
+// @include media(desktop) {
+//   fill: white;
+// }
+// }
+.footer-button-game-container {
+  position: relative; /* Для накладання кнопок одна на одну */
+}
+
+.game-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px; /* Встанови необхідну ширину кнопки */
+  height: 40px; /* Встанови необхідну висоту кнопки */
+  padding: 9px 13px;
+  background: linear-gradient(90deg, #609 0%, #932a81 100%);
+  box-shadow: 0 0 56px 8px #b5b5ec;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
+  position: absolute; /* Для накладання кнопок одна на одну */
+}
+
 .png-icon {
   width: 25px;
   height: 28px;
   margin-right: 13px;
 }
+
+.icon-game {
+  width: 24px; /* Встанови розмір SVG іконки */
+  height: 24px;
+  margin-right: 8px; /* Відступ між SVG іконкою та текстом */
+}
+
 .button-text {
   width: 92px;
   height: 29px;
-  @include media(desktop) {
-    fill: white;
-  }
+}
+
+.initial-button {
+  z-index: 1; /* Показувати на передньому плані */
+}
+
+.hover-button {
+  display: none; /* Приховати за замовчуванням */
+  z-index: 2; /* Показувати при ховері */
+}
+
+.footer-button-game-container:hover .initial-button {
+  display: none; /* Приховати початкову кнопку при ховері */
+}
+
+.footer-button-game-container:hover .hover-button {
+  display: flex; /* Показати другу кнопку при ховері */
 }
 
 .footer-wrapper-link {
@@ -61,21 +113,27 @@
   border-radius: 8px;
   transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
 }
-.game-button:hover {
-  background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
-  box-shadow: 0 0 32px 0 #654fab;
-  color: #381c4f;
+// .white-icon {
+//   display: inline;
+// }
+// .black-icon {
+//   display: none;
+// }
+// .game-button:hover .white-icon {
+//   display: none;
+// }
+// .game-button:hover .black-icon {
+//   background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
+//   box-shadow: 0 0 32px 0 #654fab;
+//   color: #381c4f;
 
-  // border: 1px solid white;
-}
+// }
 .footer-list-general-page {
   display: flex;
 }
 
-// ____________320
 .container-general-page-footer {
   @include media(mobile) {
-    // display: flex;
     width: 100vw;
     padding: 24px 10px;
   }
