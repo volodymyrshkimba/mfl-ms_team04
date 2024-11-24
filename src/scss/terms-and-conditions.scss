@@ -53,3 +53,17 @@
 .home-link a {
   margin-right: 8px;
 }
+
+.game-button-rules {
+  display: flex;
+  background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
+  box-shadow: 0 0 32px 0 #654fab;
+  color: #381c4f;
+  padding: 9px 13px;
+  border-radius: 8px;
+}
+.game-button-rules:hover {
+  background: linear-gradient(90deg, #609 0%, #932a81 100%);
+  box-shadow: 0 0 56px 8px #b5b5ec;
+  border: 1px solid white;
+}
