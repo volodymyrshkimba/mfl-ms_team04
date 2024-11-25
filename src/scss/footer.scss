@@ -1,45 +1,37 @@
 // _________ first desktop
-.container-general-page-footer {
-  @include media(desktop) {
+@media (max-width: 1200px) {
+  .container-general-page-footer {
     max-width: 1200px;
-    padding: 0px 84px 0px 84px;
+    padding: 0px 84px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
-.footer-container {
-  @include media(desktop) {
+
+@media (max-width: 1200px) {
+  .footer-container {
     // width: 1032px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 40px;
+    border-radius: 24px 24px 0 0;
   }
 }
 // ________________________________mob
-// .footer-container {
-//   @include media(mobile) {
+// @media (max-width: 320px) {
+//   .footer-container {
 //     display: flex;
 //     min-width: 320px;
 //     align-items: center;
 //     justify-content: center;
 //     gap: 10px;
-//     padding: 10px 5px;
-
+//     padding: 0;
 //     flex-direction: column;
-//   }
-// }
-.footer-general-page-mobile {
-  @include media(desktop) {
-    border-radius: 24px 24px 0 0;
-    background: linear-gradient(
-      0deg,
-      rgba(168, 160, 229, 0.8) 0%,
-      rgba(241, 242, 252, 0.8) 63.4%
-    );
-  }
-}
-// .footer-general-page-mobile {
-//   @include media(mobile) {
+
+//     border-radius: 0;
 //     background: linear-gradient(
 //       0deg,
 //       rgba(168, 160, 229, 0.8) 0%,
@@ -47,6 +39,7 @@
 //     );
 //   }
 // }
+
 .png-icon {
   width: 25px;
   height: 28px;
@@ -78,7 +71,7 @@
 //     gap: 5px;
 //   }
 // }
-
+// _________________________________________
 .footer-button-game-container {
   display: inline-flex;
   align-items: center;
@@ -97,10 +90,12 @@
 .button-text {
   width: 92px;
   height: 29px;
-  fill: white;
+  fill: #ffffff;
   transition: fill 0.3s, text-shadow 0.3s;
 }
-
+.game-button:hover .button-text {
+  fill: #381c4f;
+}
 .game-button:hover {
   background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
   box-shadow: 0 0 32px 0 #654fab;
@@ -108,6 +103,7 @@
 .footer-list-general-page {
   display: flex;
 }
+// _______________________________________________________
 
 .rule {
   text-decoration: underline;
@@ -115,19 +111,30 @@
 .rule:hover {
   @include gradient-text;
 }
-// .container-general-page-footer {
-//   @include media(mobile) {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 10px;
-//     align-items: center;
-//     justify-content: center;
-//     width: 100vw;
-//     padding: 24px 10px;
-//   }
-// }
-.game-button:hover {
-  @include media(mobile) {
-    // border: 1px solid white;
+
+@media (min-width: 320px) {
+  .container-general-page-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+    padding: 0;
   }
 }
+
+.footer-general-page-mobile {
+  @include media(mobile) {
+    border-radius: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(168, 160, 229, 0.8) 0%,
+      rgba(241, 242, 252, 0.8) 63.4%
+    );
+  }
+}
+
+// border: 1px solid white;
