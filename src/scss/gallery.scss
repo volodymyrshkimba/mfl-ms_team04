@@ -13,11 +13,12 @@
     background: url('../img/gallery/bg-ellipse-top-desktop@1x.png') no-repeat
         right top,
       url('../img/gallery/bg-ellipse-center-desktop@1x.png') no-repeat center
-        center;
+        bottom;
   }
 }
 
 .gallery-title {
+  scroll-margin-top: 110px;
   font-family: 'Domine', serif;
   font-weight: 700;
   text-align: center;

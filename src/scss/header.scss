@@ -20,6 +20,10 @@
   }
 }
 
+.header-nav-link:hover {
+  @include gradient-text;
+}
+
 .header-section {
   top: 0;
   left: 0;
@@ -79,6 +83,14 @@
   }
 }
 
+.header-burger-icon {
+  stroke: #381c4f;
+}
+
+.header-burger:active .header-burger-icon {
+  stroke: #932a81;
+}
+
 // MOBILE MENU STYLES
 
 @include media(to-desktop) {
@@ -121,6 +133,14 @@
     right: 32px;
   }
 
+  .mob-menu-close-icon {
+    fill: #d1d2f4;
+  }
+
+  .mob-menu-close-btn:active .mob-menu-close-icon {
+    fill: #932a81;
+  }
+
   .mob-menu-nav-list {
     text-align: center;
   }
@@ -132,6 +152,10 @@
     font-weight: 600;
     font-size: 20px;
     color: #f1f2fc;
+  }
+
+  .mob-menu-nav-link:active {
+    color: #381c4f;
   }
 
   .mob-menu-overlay.mob-menu-is-open {

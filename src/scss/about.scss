@@ -1,0 +1,51 @@
+.about-container {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 16px 40px;
+  background: url('../img/about/ellipse-top@1x.png') no-repeat,
+    url('../img/about/ellipse-bottom@1x.png') no-repeat center bottom,
+    url('../img/about/bg-about@1x.png') no-repeat;
+  @include media(desktop) {
+    max-width: 1200px;
+    padding: 124px 208px 108px 524px;
+    background: url('../img/about/ellipse-top-desktop@1x.png') no-repeat,
+      url('../img/about/ellipse-bottom-desktop@1x.png') no-repeat center bottom,
+      url('../img/about/line-bottom-desktop@1x.png') no-repeat bottom,
+      url('../img/about/girl-desktop@1x.png') no-repeat left 172px bottom,
+      url('../img/about/bg-about-desktop@1x.png') no-repeat;
+  }
+}
+
+.about-title {
+  scroll-margin-top: 110px;
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  @include font(24, 31.2);
+  border-radius: 12px;
+  padding: 8px 16px;
+  text-align: center;
+  max-width: 221px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 16px;
+  background: rgba(230, 231, 249, 0.6);
+  @include media(desktop) {
+    @include font(32, 41.6);
+    max-width: 284px;
+    margin: 0 0 24px 0;
+    border-radius: 16px;
+  }
+}
+
+.about-text {
+  color: #3a2576;
+  border-radius: 20px;
+  padding: 20px;
+  background: rgba(230, 231, 249, 0.6);
+  @include media(desktop) {
+    padding: 16px;
+    border-radius: 24px;
+    @include font(18, 27);
+  }
+}

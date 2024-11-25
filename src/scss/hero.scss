@@ -51,3 +51,18 @@
   border-radius: 8px;
   padding: 9px 0px 9px 47px;
 }
+
+.hero-icon-text {
+  fill: #381c4f;
+}
+
+.hero-link:hover .hero-icon-text {
+  fill: #f1f2fc;
+}
+
+.hero-link:hover {
+  background: url('../img/google-play-icon.png') no-repeat 13px center / 25px
+      28px,
+    linear-gradient(90deg, #609 0%, #932a81 100%);
+  box-shadow: 0 0 56px 8px #b5b5ec;
+}

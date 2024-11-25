@@ -11,8 +11,8 @@ const galleryPhoneSwiper = new Swiper('.gallery-swiper', {
 
 const galleryDesktopSwiper = new Swiper('.gallery-desktop-swiper', {
   modules: [Navigation],
-  loop: true,
   slidesPerView: 5,
+  loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
