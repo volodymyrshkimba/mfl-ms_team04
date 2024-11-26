@@ -25,6 +25,9 @@
 }
 
 @include media(to-desktop) {
+  .reviews-desktop-swiper {
+    display: none;
+  }
   .reviews-slide {
     background: url('../img/reviews/quotes2.svg') no-repeat 16px 16px,
       linear-gradient(
@@ -97,5 +100,159 @@
 @include media(desktop) {
   .reviews-phone-swiper {
     display: none;
+  }
+
+  .reviews-desktop-slide {
+    padding-top: 60px;
+    filter: blur(4px);
+  }
+
+  //   .swiper-slide-prev .reviews-desktop-slide-wrapper {
+  //     background: url('../img/reviews/card-linear-left.png') repeat-y center right
+  //         85px,
+  //       url('../img/reviews/quotes2.svg') no-repeat 32px 32px / 32px 32px,
+  //       linear-gradient(
+  //         360deg,
+  //         rgba(156, 151, 226, 0.8) 0%,
+  //         rgba(241, 242, 252, 0.8) 63.4%
+  //       );
+  //   }
+
+  //   .swiper-slide-next .reviews-desktop-slide-wrapper {
+  //     background: url('../img/reviews/card-linear-right.png') repeat-y center left
+  //         85px,
+  //       url('../img/reviews/quotes2.svg') no-repeat 32px 32px / 32px 32px,
+  //       linear-gradient(
+  //         360deg,
+  //         rgba(156, 151, 226, 0.8) 0%,
+  //         rgba(241, 242, 252, 0.8) 63.4%
+  //       );
+  //   }
+
+  .swiper-slide-prev .reviews-desktop-slide-wrapper::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../img/reviews/card-linear-left.png') repeat-y center right
+      85px;
+  }
+  .swiper-slide-next .reviews-desktop-slide-wrapper::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    background: url('../img/reviews/card-linear-right.png') repeat-y center left
+      85px;
+  }
+
+  .reviews-desktop-slide.swiper-slide-active {
+    filter: blur(0px);
+  }
+
+  .reviews-desktop-slide-wrapper {
+    background: url('../img/reviews/quotes2.svg') no-repeat 32px 32px / 32px
+        32px,
+      linear-gradient(
+        360deg,
+        rgba(156, 151, 226, 0.8) 0%,
+        rgba(241, 242, 252, 0.8) 63.4%
+      );
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 263px !important;
+  }
+
+  .reviews-desktop-card-text {
+    padding-left: 32px;
+    font-weight: 500;
+    @include font(18, 23.4);
+    color: #3a2576;
+  }
+
+  .reviews-desktop-card-username {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    @include font(16, 20.8);
+    @include gradient-text;
+  }
+
+  .swiper-desktop-img {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .review-desktop-first-slide .swiper-desktop-img {
+    right: -15px;
+  }
+
+  .review-desktop-second-slide .swiper-desktop-img {
+    right: -37px;
+  }
+
+  .review-desktop-third-slide .swiper-desktop-img {
+    right: 0;
+  }
+
+  .review-desktop-forth-slide .swiper-desktop-img {
+    right: -37px;
+  }
+
+  .review-desktop-fifth-slide .swiper-desktop-img {
+    right: 0;
+  }
+
+  .review-desktop-first-slide .reviews-desktop-card-text {
+    max-width: 218px;
+  }
+
+  .review-desktop-second-slide .reviews-desktop-card-text {
+    max-width: 241px;
+  }
+
+  .review-desktop-third-slide .reviews-desktop-card-text {
+    max-width: 246px;
+  }
+
+  .review-desktop-forth-slide .reviews-desktop-card-text {
+    max-width: 221px;
+  }
+
+  .review-desktop-fifth-slide .reviews-desktop-card-text {
+    max-width: 221px;
+  }
+
+  .reviews-desktop-slide .swiper-desktop-img {
+    transform: scale(0.8);
+    transition: transform 200ms ease-in-out, bottom 200ms ease-in-out;
+    bottom: -35px;
+  }
+
+  .reviews-desktop-slide .review-desktop-second-slide .swiper-desktop-img {
+    bottom: -31px;
+  }
+
+  .reviews-desktop-slide .review-desktop-forth-slide .swiper-desktop-img {
+    bottom: -31px;
+  }
+
+  .reviews-desktop-slide .review-desktop-fifth-slide .swiper-desktop-img {
+    bottom: -28px;
+  }
+
+  .reviews-desktop-slide.swiper-slide-active .swiper-desktop-img {
+    transform: scale(1);
+    bottom: 0;
   }
 }
