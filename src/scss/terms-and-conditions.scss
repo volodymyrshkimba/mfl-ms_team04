@@ -1,6 +1,8 @@
 .bg-color {
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   width: 100vw;
+  overflow-x: hidden;
   font-family: 'Domine', 'Signika', sans-serif;
   background: linear-gradient(
     0deg,
@@ -9,31 +11,44 @@
   );
   color: #381c4f;
 }
+
 .container-rules-page {
   @include media(desktop) {
-    padding: 40px 84px 40px 84px;
+    padding: 40px 84px 0px 84px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.home-link {
-  display: flex;
-  align-items: center;
-  @include gradient-text;
-  margin-bottom: 40px;
-}
 
+.navigate-home {
+  display: flex;
+  margin-right: auto;
+  justify-content: start;
+}
 .home-link a {
   margin-right: 8px;
+}
+.home-link {
+  display: flex;
+  color: #381c4f;
+  align-items: center;
+  margin-bottom: 40px;
+  transition: color 0.3s;
+}
+.home-link:hover,
+.home-link:focus {
   @include gradient-text;
 }
+
 .page-additional-arrow-icon {
-  fill: #b5b5ec;
+  fill: #d1d2f480;
   margin-right: 10px;
   cursor: pointer;
 }
-.page-additional-arrow-icon :hover {
-  fill: #d1d2f4;
+.page-additional-arrow-icon:hover,
+.page-additional-arrow-icon:focus {
+  fill: #c5c5cd99;
+  stroke: rgba(193, 98, 241, 0.913);
 }
 
 .text-terms-container {
@@ -53,7 +68,8 @@
 .articles {
   font-family: 'Domine', serif;
   font-weight: 700;
-  @include font(32, 41.6);
+  font-size: 24px;
+  line-height: 1.3;
   @include gradient-text;
   margin-bottom: 24px;
   margin-left: auto;
@@ -62,16 +78,14 @@
 .mark-container {
   margin-bottom: 40px;
 }
+.text-item,
 .text-terms {
   font-family: 'Signika', sans-serif;
   font-weight: 400;
   @include font(18, 27);
-  margin-bottom: 40px;
 }
-.text-item {
-  font-family: 'Signika', sans-serif;
-  font-weight: 400;
-  @include font(18, 27);
+.text-terms {
+  margin-bottom: 40px;
 }
 .mark-item {
   list-style: disc;
@@ -101,7 +115,15 @@
   text-decoration: none;
 }
 // ___________
-
+@media (max-width: 1199px) {
+  .container-general-page-footer {
+    max-width: 100%;
+    padding: 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .container-rules {
   @include media(mobile) {
     padding: 40px 16px;
@@ -109,12 +131,7 @@
     margin-right: auto;
   }
 }
-// ___________________________________________
-.rules-desktop-wrapper {
-  background: linear-gradient(90deg, #609 0%, #932a81 100%);
-  border-radius: 24px 24px 0 0;
-  color: white;
-}
+
 .footer-container-wrapper {
   @include media(desktop) {
     display: flex;
@@ -133,14 +150,19 @@
 }
 .game-button-rules {
   display: flex;
+  width: 157px;
   background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
   padding: 9px 13px;
   border-radius: 8px;
-  box-shadow: 0 0 32px 0 #654fab;
+  box-shadow: 0px 0px 20px 1px #2b244240;
+
+  // box-shadow: 0 0 32px 0 #654fab;
 }
 
-.game-rules-button:hover {
+.game-rules-button:hover,
+.game-button:focus {
   background: linear-gradient(90deg, #609 0%, #932a81 100%);
+  border: 1px solid #b5b5ec;
   box-shadow: 0 0 56px 8px #b5b5ec;
 }
 
@@ -159,27 +181,18 @@
     // gap: 5px;
   }
 }
-.container-general-page-footer {
-  max-width: 1200px;
-  padding: 0px 84px 0px 0px;
-  margin: 0 auto;
+@media (min-width: 1999px) {
+  .container-general-page-footer {
+    min-width: 1200px;
+    padding: 0 84px;
+    margin: 0 auto;
+  }
+  .articles {
+    font-size: 32px;
+    line-height: 1.3;
+  }
 }
-// .container-rules {
-//   @include media(desktop) {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     padding: 10px 40px;
-//   }
-// }
-// .rules-desktop {
-// @include media(desktop) {
-//   max-width: 1032px;
-//   color: #381c4f;
-//   border-radius: 24px 24px 0 0;
-//   background: linear-gradient(90deg, #660099 -0.42%, #932a81 84.45%);
-// }
-// }
+
 .png-icon {
   width: 25px;
   height: 28px;
@@ -198,7 +211,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 126px;
+  width: 100%;
+  width: 157px;
 }
 
 .game-button {
@@ -216,7 +230,8 @@
   // transition: fill 0.3s, text-shadow 0.3s;
 }
 
-.game-button:hover {
+.game-button:hover,
+.game-button:focus {
   background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
   box-shadow: 0 0 32px 0 #654fab;
 }
@@ -230,7 +245,7 @@
 .rule-page:hover {
   @include gradient-text;
 }
-// ____________________________
+
 .rules-desktop {
   @include media(mobile) {
     width: 100vw;
