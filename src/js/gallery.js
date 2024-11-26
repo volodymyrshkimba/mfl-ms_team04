@@ -9,18 +9,19 @@ const galleryPhoneSwiper = new Swiper('.gallery-swiper', {
 const galleryDesktopSwiper = new Swiper('.gallery-desktop-swiper', {
   effect: 'coverflow',
   slidesPerView: 5,
-  loop: true,
   centeredSlides: true,
+  initialSlide: 2,
+  speed: 1000,
   coverflowEffect: {
     rotate: 0,
-    stretch: 50,
+    stretch: 80,
     depth: 150,
     modifier: 1,
     slideShadows: false,
   },
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.gallery-swiper-button-next',
+    prevEl: '.gallery-swiper-button-prev',
   },
 });

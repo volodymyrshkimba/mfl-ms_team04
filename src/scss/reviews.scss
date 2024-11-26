@@ -1,0 +1,101 @@
+.reviews-container {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 16px 40px;
+  background: url('../img/reviews/ellipse-phone@1x.png') no-repeat;
+  @include media(desktop) {
+    max-width: 1200px;
+    padding: 100px 84px 80px;
+    background: url('../img/reviews/ellipse-desktop@1x.png') no-repeat top
+      center;
+  }
+}
+
+.reviews-title {
+  text-align: center;
+  margin-bottom: 32px;
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  @include font(24, 31.2);
+  @include media(desktop) {
+    margin-bottom: 20px;
+    @include font(32, 41.6);
+  }
+}
+
+@include media(to-desktop) {
+  .reviews-slide {
+    background: url('../img/reviews/quotes2.svg') no-repeat 16px 16px,
+      linear-gradient(
+        360deg,
+        rgba(156, 151, 226, 0.8) 0%,
+        rgba(241, 242, 252, 0.8) 63.4%
+      );
+    border-radius: 36px;
+  }
+
+  .reviews-slide-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    height: 204px !important;
+  }
+
+  .reviews-card-text {
+    padding-left: 16px;
+    font-weight: 500;
+    @include font(16, 20.8);
+    color: #3a2576;
+  }
+
+  .reviews-card-username {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    @include font(14, 18.2);
+    @include gradient-text;
+  }
+
+  .review-first-slide {
+    background: url('../img/reviews/1.png') no-repeat right bottom;
+  }
+  .review-second-slide {
+    background: url('../img/reviews/2.png') no-repeat right bottom;
+  }
+  .review-third-slide {
+    background: url('../img/reviews/3.png') no-repeat right bottom;
+  }
+  .review-forth-slide {
+    background: url('../img/reviews/4.png') no-repeat right bottom;
+  }
+  .review-fifth-slide {
+    background: url('../img/reviews/5.png') no-repeat right bottom;
+  }
+
+  .review-first-slide .reviews-card-text {
+    max-width: 152px;
+  }
+  .review-second-slide .reviews-card-text {
+    max-width: 161px;
+  }
+  .review-third-slide .reviews-card-text {
+    max-width: 173px;
+  }
+  .review-forth-slide .reviews-card-text {
+    max-width: 157px;
+  }
+  .review-fifth-slide .reviews-card-text {
+    max-width: 161px;
+  }
+}
+
+@include media(desktop) {
+  .reviews-phone-swiper {
+    display: none;
+  }
+}
