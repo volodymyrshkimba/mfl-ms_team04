@@ -8,6 +8,15 @@
       center,
     url('../img/hero/hero-bg-phones@1x.png') no-repeat center bottom,
     url('../img/hero/hero-bg-ellipse@1x.png') no-repeat center bottom;
+
+  @media screen and (min-resolution: 192dpi) {
+    background: url('../img/hero/hero-bg-game-trailer@2x.png') no-repeat top
+        120px center / 320px 184px,
+      url('../img/hero/hero-bg-phones@2x.png') no-repeat center bottom / 320px
+        436px,
+      url('../img/hero/hero-bg-ellipse@2x.png') no-repeat center bottom / 320px
+        539px;
+  }
   @include media(desktop) {
     max-width: 1200px;
     padding: 360px 84px 77px;
@@ -17,6 +26,15 @@
         bottom,
       url('../img/hero/hero-bg-ellipse-desktop@1x.png') no-repeat left 551px
         bottom;
+
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/hero/hero-bg-game-trailer-desktop@2x.png')
+          no-repeat 84px 96px / 504px 288px,
+        url('../img/hero/hero-bg-phones-desktop@2x.png') no-repeat left 551px
+          bottom / 649px 600px,
+        url('../img/hero/hero-bg-ellipse-desktop@2x.png') no-repeat left 551px
+          bottom / 626px 600px;
+    }
   }
 }
 
@@ -41,6 +59,7 @@
 }
 
 .hero-link {
+  transition: all 250ms ease-in-out;
   display: block;
   width: 152px;
   height: 47px;
@@ -53,6 +72,7 @@
 }
 
 .hero-icon-text {
+  transition: all 250ms ease-in-out;
   fill: #381c4f;
 }
 

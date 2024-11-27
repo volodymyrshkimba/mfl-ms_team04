@@ -4,11 +4,22 @@
   margin-right: auto;
   padding: 60px 16px 40px;
   background: url('../img/reviews/ellipse-phone@1x.png') no-repeat;
+
+  @media screen and (min-resolution: 192dpi) {
+    background: url('../img/reviews/ellipse-phone@1x.png') no-repeat 0 0 / 320px
+      250px;
+  }
+
   @include media(desktop) {
     max-width: 1200px;
     padding: 100px 84px 80px;
     background: url('../img/reviews/ellipse-desktop@1x.png') no-repeat top
       center;
+
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/reviews/ellipse-desktop@2x.png') no-repeat top
+        center / 980px 554px;
+    }
   }
 }
 
@@ -66,18 +77,38 @@
 
   .review-first-slide {
     background: url('../img/reviews/1.png') no-repeat right bottom;
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/reviews/1@2x.png') no-repeat right bottom / 151px
+        195px;
+    }
   }
   .review-second-slide {
     background: url('../img/reviews/2.png') no-repeat right bottom;
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/reviews/2@2x.png') no-repeat right bottom / 151px
+        181px;
+    }
   }
   .review-third-slide {
     background: url('../img/reviews/3.png') no-repeat right bottom;
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/reviews/3@2x.png') no-repeat right bottom / 135px
+        179px;
+    }
   }
   .review-forth-slide {
     background: url('../img/reviews/4.png') no-repeat right bottom;
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/reviews/4@2x.png') no-repeat right bottom / 194px
+        193px;
+    }
   }
   .review-fifth-slide {
     background: url('../img/reviews/5.png') no-repeat right bottom;
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/reviews/5@2x.png') no-repeat right bottom / 158px
+        170px;
+    }
   }
 
   .review-first-slide .reviews-card-text {
@@ -107,37 +138,20 @@
     filter: blur(4px);
   }
 
-  //   .swiper-slide-prev .reviews-desktop-slide-wrapper {
-  //     background: url('../img/reviews/card-linear-left.png') repeat-y center right
-  //         85px,
-  //       url('../img/reviews/quotes2.svg') no-repeat 32px 32px / 32px 32px,
-  //       linear-gradient(
-  //         360deg,
-  //         rgba(156, 151, 226, 0.8) 0%,
-  //         rgba(241, 242, 252, 0.8) 63.4%
-  //       );
-  //   }
-
-  //   .swiper-slide-next .reviews-desktop-slide-wrapper {
-  //     background: url('../img/reviews/card-linear-right.png') repeat-y center left
-  //         85px,
-  //       url('../img/reviews/quotes2.svg') no-repeat 32px 32px / 32px 32px,
-  //       linear-gradient(
-  //         360deg,
-  //         rgba(156, 151, 226, 0.8) 0%,
-  //         rgba(241, 242, 252, 0.8) 63.4%
-  //       );
-  //   }
-
   .swiper-slide-prev .reviews-desktop-slide-wrapper::before {
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 20;
     top: 0;
     left: 0;
     background: url('../img/reviews/card-linear-left.png') repeat-y center right
-      85px;
+      85px / 435px 300px;
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/reviews/card-linear-left@2x.png') repeat-y center
+        right 85px / 435px 300px;
+    }
   }
   .swiper-slide-next .reviews-desktop-slide-wrapper::before {
     content: '';
@@ -148,7 +162,11 @@
     top: 0;
     left: 0;
     background: url('../img/reviews/card-linear-right.png') repeat-y center left
-      85px;
+      85px / 435px 300px;
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/reviews/card-linear-right@2x.png') repeat-y center
+        left 85px / 435px 300px;
+    }
   }
 
   .reviews-desktop-slide.swiper-slide-active {
@@ -243,6 +261,10 @@
     bottom: -31px;
   }
 
+  .reviews-desktop-slide .review-desktop-third-slide .swiper-desktop-img {
+    bottom: -31px;
+  }
+
   .reviews-desktop-slide .review-desktop-forth-slide .swiper-desktop-img {
     bottom: -31px;
   }
@@ -254,5 +276,42 @@
   .reviews-desktop-slide.swiper-slide-active .swiper-desktop-img {
     transform: scale(1);
     bottom: 0;
+  }
+
+  .reviews-swiper-button {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: rgba(209, 210, 244, 0.5);
+    border: 1px solid #381c4f;
+    border-radius: 20px;
+    transition: all 150ms ease-in-out;
+  }
+
+  .reviews-swiper-button::after {
+    display: none;
+  }
+
+  .reviews-swiper-button-icon {
+    width: 24px !important;
+    height: 24px !important;
+    fill: #381c4f;
+    transition: all 150ms ease-in-out;
+  }
+
+  .reviews-swiper-button:hover {
+    border-color: #932a81;
+  }
+
+  .reviews-swiper-button:hover .reviews-swiper-button-icon {
+    fill: #932a81;
+  }
+
+  .swiper-button-prev.reviews-swiper-button {
+    left: 0;
+    top: 192px;
+  }
+  .swiper-button-next.reviews-swiper-button {
+    right: 0;
+    top: 192px;
   }
 }

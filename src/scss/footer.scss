@@ -43,6 +43,10 @@
     fill: #381c4f;
   }
 
+  .game-button:hover .button-text {
+    fill: #381c4f;
+  }
+
   .game-button:hover,
   .game-button:focus {
     background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
@@ -62,7 +66,7 @@
 
 @media (min-width: 1200px) {
   .container-general-page-footer {
-    min-width: 1200px;
+    max-width: 1200px;
     padding: 0 84px;
     margin: 0 auto;
   }
@@ -94,6 +98,7 @@
 }
 
 .png-icon {
+  fill: #f1f2fc;
   width: 25px;
   height: 28px;
   margin-right: 13px;
@@ -110,14 +115,14 @@
   transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
 }
 
-.button-text {
+.button-text.footer-btn-text {
   width: auto;
   height: auto;
-  fill: #ffffff;
+  fill: #f1f2fc;
   transition: fill 0.3s, text-shadow 0.3s;
 }
 
-.game-button:hover .button-text {
+.game-button:hover .button-text.footer-btn-text {
   fill: #381c4f;
 }
 

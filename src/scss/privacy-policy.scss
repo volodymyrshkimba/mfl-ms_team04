@@ -96,7 +96,7 @@
 .button-text {
   width: auto;
   height: auto;
-  fill: #ffffff;
+  fill: #381c4f;
   transition: fill 0.3s, text-shadow 0.3s;
 }
 
@@ -173,7 +173,7 @@
   }
 
   .game-button-rules:hover .button-text {
-    fill: #381c4f;
+    fill: #f1f2fc;
   }
 
   .game-button-rules:hover,
@@ -247,7 +247,7 @@
 .game-button-rules:hover .button-text,
 .game-button-rules:focus .button-text,
 .game-button-rules:active .button-text {
-  fill: #381c4f;
+  fill: #f1f2fc;
 }
 
 .footer-list-general-page {

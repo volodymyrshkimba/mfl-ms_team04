@@ -4,8 +4,17 @@
   margin-right: auto;
   padding: 60px 40px 360px;
   background: url('../img/how-to-play/bg-ellipse@1x.png') no-repeat center top,
-    url('../img/how-to-play/bg-phones-phone@1s.png') no-repeat center bottom,
+    url('../img/how-to-play/bg-phones-phone@1x.png') no-repeat center bottom,
     linear-gradient(180deg, #6650ad 0%, #7876c1 38.4%, #8a9bd4 100%);
+
+  @media screen and (min-resolution: 192dpi) {
+    background: url('../img/how-to-play/bg-ellipse@2x.png') no-repeat center top /
+        320px 250px,
+      url('../img/how-to-play/bg-phones-phone@2x.png') no-repeat center bottom /
+        320px 377px,
+      linear-gradient(180deg, #6650ad 0%, #7876c1 38.4%, #8a9bd4 100%);
+  }
+
   @include media(desktop) {
     max-width: 1200px;
     padding: 100px 0 28px;
@@ -16,6 +25,16 @@
       url('../img/how-to-play/bg-ellipse-desktop-phones@1x.png') no-repeat top
         80px right 10px,
       linear-gradient(180deg, #6650ad 0%, #7876c1 38.4%, #8a9bd4 100%);
+
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/how-to-play/bg-ellipse-desktop-top@2x.png')
+          no-repeat center top / 663px 368px,
+        url('../img/how-to-play/bg-phones-desktop@2x.png') no-repeat top 150px
+          right 30px / 502px 502px,
+        url('../img/how-to-play/bg-ellipse-desktop-phones@2x.png') no-repeat top
+          80px right 10px / 645px 606px,
+        linear-gradient(180deg, #6650ad 0%, #7876c1 38.4%, #8a9bd4 100%);
+    }
   }
 }
 
@@ -45,6 +64,10 @@
   height: 173px;
   padding: 24px 32px;
   background: url('../img/how-to-play/card-bg@1x.png') no-repeat -40px -35px;
+  @media screen and (min-resolution: 192dpi) {
+    background: url('../img/how-to-play/card-bg@2x.png') no-repeat -40px -35px /
+      320px 253px;
+  }
   box-shadow: 0 4px 40px 0 rgba(43, 36, 66, 0.25);
   border-radius: 32px;
   position: relative;

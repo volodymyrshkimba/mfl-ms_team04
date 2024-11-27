@@ -65,7 +65,11 @@
               <p class="reviews-desktop-card-username">- FarmFanatic123</p>
               <img
                 class="swiper-desktop-img"
-                src="../img/reviews/1-desktop.png"
+                srcset="
+                  ./img/reviews/1-desktop.png    1x,
+                  ./img/reviews/1-desktop@2x.png 2x
+                "
+                src="./img/reviews/1-desktop.png"
                 alt="1"
               />
             </div>
@@ -80,7 +84,11 @@
               <p class="reviews-desktop-card-username">- GreenThumbGuru</p>
               <img
                 class="swiper-desktop-img"
-                src="../img/reviews/2-desktop.png"
+                srcset="
+                  ./img/reviews/2-desktop.png    1x,
+                  ./img/reviews/2-desktop@2x.png 2x
+                "
+                src="./img/reviews/2-desktop.png"
                 alt="2"
               />
             </div>
@@ -96,7 +104,11 @@
               <p class="reviews-desktop-card-username">- MergeMaster</p>
               <img
                 class="swiper-desktop-img"
-                src="../img/reviews/3-desktop.png"
+                srcset="
+                  ./img/reviews/3-desktop.png    1x,
+                  ./img/reviews/3-desktop@2x.png 2x
+                "
+                src="./img/reviews/3-desktop.png"
                 alt="3"
               />
             </div>
@@ -112,7 +124,11 @@
               <p class="reviews-desktop-card-username">- MansionDreamer</p>
               <img
                 class="swiper-desktop-img"
-                src="../img/reviews/4-desktop.png"
+                srcset="
+                  ./img/reviews/4-desktop.png    1x,
+                  ./img/reviews/4-desktop@2x.png 2x
+                "
+                src="./img/reviews/4-desktop.png"
                 alt="4"
               />
             </div>
@@ -128,14 +144,30 @@
               <p class="reviews-desktop-card-username">- PuzzleLover88</p>
               <img
                 class="swiper-desktop-img"
-                src="../img/reviews/5-desktop.png"
+                srcset="
+                  ./img/reviews/5-desktop.png    1x,
+                  ./img/reviews/5-desktop@2x.png 2x
+                "
+                src="./img/reviews/5-desktop.png"
                 alt="5"
               />
             </div>
           </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div
+          class="swiper-button-prev reviews-swiper-button reviews-swiper-button-prev"
+        >
+          <svg class="reviews-swiper-button-icon">
+            <use href="./img/sprite.svg#arrow-left-swiper"></use>
+          </svg>
+        </div>
+        <div
+          class="swiper-button-next reviews-swiper-button reviews-swiper-button-next"
+        >
+          <svg class="reviews-swiper-button-icon">
+            <use href="./img/sprite.svg#arrow-right-swiper"></use>
+          </svg>
+        </div>
       </div>
     </div>
   </div>

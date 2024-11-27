@@ -6,6 +6,14 @@
   background: url('../img/about/ellipse-top@1x.png') no-repeat,
     url('../img/about/ellipse-bottom@1x.png') no-repeat center bottom,
     url('../img/about/bg-about@1x.png') no-repeat;
+
+  @media screen and (min-resolution: 192dpi) {
+    background: url('../img/about/ellipse-top@2x.png') no-repeat / 320px 220px,
+      url('../img/about/ellipse-bottom@2x.png') no-repeat center bottom / 320px
+        130px,
+      url('../img/about/bg-about@2x.png') no-repeat / 320px 515px;
+  }
+
   @include media(desktop) {
     max-width: 1200px;
     padding: 124px 208px 108px 524px;
@@ -14,6 +22,18 @@
       url('../img/about/line-bottom-desktop@1x.png') no-repeat bottom,
       url('../img/about/girl-desktop@1x.png') no-repeat left 172px bottom,
       url('../img/about/bg-about-desktop@1x.png') no-repeat;
+
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/about/ellipse-top-desktop@2x.png') no-repeat 0 0 /
+          1200px 229px,
+        url('../img/about/ellipse-bottom-desktop@2x.png') no-repeat center
+          bottom / 663px 127px,
+        url('../img/about/line-bottom-desktop@2x.png') no-repeat bottom / 1200px
+          60px,
+        url('../img/about/girl-desktop@2x.png') no-repeat left 172px bottom /
+          264px 409px,
+        url('../img/about/bg-about-desktop@2x.png') no-repeat 0 0 / 1200px 562px;
+    }
   }
 }
 

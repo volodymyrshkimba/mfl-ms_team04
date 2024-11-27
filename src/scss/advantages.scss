@@ -5,12 +5,25 @@
   padding: 40px 16px;
   background: url('../img/advantages/bg-ellipse@1x.png') no-repeat center bottom,
     linear-gradient(180deg, #8a9ad4 0%, #6650ad 100%);
+
+  @media screen and (min-resolution: 192dpi) {
+    background: url('../img/advantages/bg-ellipse@2x.png') no-repeat center
+        bottom / 320px 107px,
+      linear-gradient(180deg, #8a9ad4 0%, #6650ad 100%);
+  }
+
   @include media(desktop) {
     max-width: 1200px;
     padding: 100px 84px 80px;
     background: url('../img/advantages/bg-ellipse-decktop@1x.png') no-repeat
         center bottom,
       linear-gradient(180deg, #8a9ad4 0%, #6650ad 100%);
+
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/advantages/bg-ellipse-decktop@2x.png') no-repeat
+          center bottom / 980px 203px,
+        linear-gradient(180deg, #8a9ad4 0%, #6650ad 100%);
+    }
   }
 }
 
@@ -34,6 +47,14 @@
       url('../img/advantages/line2.png') no-repeat 294px 253px,
       url('../img/advantages/line3.png') no-repeat 319px 360px,
       url('../img/advantages/line4.png') no-repeat 559px 547px;
+
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/advantages/line1@2x.png') no-repeat 502px 29px /
+          403px 122px,
+        url('../img/advantages/line2@2x.png') no-repeat 294px 253px / 323px 50px,
+        url('../img/advantages/line3@2x.png') no-repeat 319px 360px / 672px 96px,
+        url('../img/advantages/line4@2x.png') no-repeat 559px 547px / 146px 51px;
+    }
   }
 }
 
@@ -42,6 +63,11 @@
   box-shadow: 0 4px 40px 0 rgba(43, 36, 66, 0.25);
   border-radius: 40px;
   background: url('../img/advantages/bg-card@1x.png') no-repeat top -35px left -15px;
+
+  @media screen and (min-resolution: 192dpi) {
+    background: url('../img/advantages/bg-card@2x.png') no-repeat top -35px left -15px /
+      320px 264px;
+  }
   position: relative;
   display: flex;
   flex-direction: column;
@@ -51,6 +77,11 @@
     width: 328px;
     background: url('../img/advantages/bg-card-desktop@1x.png') no-repeat top -35px
       left -40px;
+
+    @media screen and (min-resolution: 192dpi) {
+      background: url('../img/advantages/bg-card-desktop@2x.png') no-repeat top -35px
+        left -40px / 408px 264px;
+    }
   }
 }
 
@@ -122,11 +153,17 @@
 .icon-tool {
   top: -8px;
   right: -7px;
+  @media screen and (min-resolution: 192dpi) {
+    right: -18px;
+  }
 }
 
 .icon-gloves {
   top: -13px;
   right: -16px;
+  @media screen and (min-resolution: 192dpi) {
+    right: -18px;
+  }
 }
 
 .icon-light {

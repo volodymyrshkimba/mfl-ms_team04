@@ -11,6 +11,7 @@ const reviewsDesktopSwiper = new Swiper('.reviews-desktop-swiper-select', {
   slidesPerView: 2,
   effect: 'coverflow',
   centeredSlides: true,
+  speed: 500,
   initialSlide: 1,
   coverflowEffect: {
     rotate: 0,
@@ -20,7 +21,7 @@ const reviewsDesktopSwiper = new Swiper('.reviews-desktop-swiper-select', {
     slideShadows: false,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.reviews-swiper-button-next',
+    prevEl: '.reviews-swiper-button-prev',
   },
 });
