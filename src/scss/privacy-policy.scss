@@ -87,20 +87,42 @@
   text-decoration: none;
 }
 
+.game-button-rules {
+  display: flex;
+  background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
+  box-shadow: 0px 0px 20px 1px rgba;
+  padding: 9px 13px;
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
+}
+.game-button-rules:hover,
+.game-button-rules:focus,
+.game-button-rules:active {
+  background: linear-gradient(90deg, #609 0%, #932a81 100%);
+  border: 1px solid #b5b5ec;
+  box-shadow: 0 0 56px 8px #b5b5ec;
+}
+
+.button-text-rules {
+  width: 92px;
+  height: 29;
+  fill: #381c4f;
+}
+
+.button-text-rules:hover,
+.button-text-rulex:focus,
+.button-text-rulex:active {
+  fill: #ffffff;
+}
+
 .png-icon {
   width: 25px;
   height: 28px;
   margin-right: 13px;
 }
-
-.button-text {
-  width: auto;
-  height: auto;
-  fill: #ffffff;
-  transition: fill 0.3s, text-shadow 0.3s;
+.text-terms-policy-data {
+  margin-bottom: 0px;
 }
-
-/* Стилі для екранів від 320px до 1199px */
 @media (max-width: 1199px) {
   .container-rules-page {
     display: flex;
@@ -146,7 +168,7 @@
 
   .rights-rules-white {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 18.2px;
     color: #ffff;
   }
@@ -158,30 +180,6 @@
     gap: 10px;
   }
 
-  .game-button-rules {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 157px;
-    height: 47px;
-    cursor: pointer;
-    background: linear-gradient(90deg, #609 0%, #932a81 100%);
-    box-shadow: 0 0 56px 8px #b5b5ec;
-    padding: 9px 13px;
-    border-radius: 8px;
-    transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
-  }
-
-  .game-button-rules:hover .button-text {
-    fill: #381c4f;
-  }
-
-  .game-button-rules:hover,
-  .game-button-rules:focus {
-    background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
-    box-shadow: 0 0 32px 0 #654fab;
-  }
-
   .rules-wrapper {
     display: flex;
     flex-direction: column;
@@ -190,7 +188,6 @@
   }
 }
 
-/* Стилі для екранів від 1200px і більше */
 @media (min-width: 1200px) {
   .container-general-page-footer {
     min-width: 1200px;
@@ -211,43 +208,6 @@
     font-size: 32px;
     line-height: 1.3;
   }
-  .game-button-rules {
-    background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
-    box-shadow: 0 0 32px 0 #654fab;
-  }
-
-  .game-button-rules:hover,
-  .game-button-rules:focus {
-    background: linear-gradient(90deg, #609 0%, #932a81 100%);
-    border: 1px solid #b5b5ec;
-    box-shadow: 0 0 56px 8px #b5b5ec;
-  }
-
-  .rules-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-}
-
-.game-button-rules {
-  display: flex;
-  width: 157px;
-  height: 47px;
-  cursor: pointer;
-  background: linear-gradient(90deg, #609 0%, #932a81 100%);
-  // box-shadow: 0 0 56px 8px #b5b5ec;
-  box-shadow: 0px 0px 20px 1px #2b244240;
-  padding: 9px 13px;
-  border-radius: 8px;
-  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
-}
-
-.game-button-rules:hover .button-text,
-.game-button-rules:focus .button-text,
-.game-button-rules:active .button-text {
-  fill: #381c4f;
 }
 
 .footer-list-general-page {

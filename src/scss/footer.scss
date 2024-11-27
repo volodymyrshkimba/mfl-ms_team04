@@ -1,3 +1,9 @@
+@media (max-width: 363px) and (min-width: 320px) {
+  .rights-rules {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 1199px) {
   .container-general-page-footer {
     max-width: 100%;
@@ -36,27 +42,26 @@
     background: linear-gradient(90deg, #609 0%, #932a81 100%);
     box-shadow: 0 0 56px 8px #b5b5ec;
     padding: 9px 13px;
+    fill: #ffffff;
     border-radius: 8px;
-    transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
   }
-  .game-button:active .button-text {
+  .button-text {
+    width: 92px;
+    height: 29px;
+    fill: #ffffff;
+  }
+
+  .button-text:active {
     fill: #381c4f;
   }
 
   .game-button:hover,
-  .game-button:focus {
+  .game-button:focus,
+  .game-button:active {
     background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
     box-shadow: 0 0 32px 0 #654fab;
-  }
-
-  .game-button-rules {
-    background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
-    box-shadow: 0 0 32px 0 #654fab;
-  }
-
-  .game-button-rules:active {
-    background: linear-gradient(90deg, #609 0%, #932a81 100%);
-    box-shadow: 0 0 56px 8px #b5b5ec;
+    transition: background-color 0.2s, box-shadow 0.2s;
   }
 }
 
@@ -80,16 +85,37 @@
     );
     color: #381c4f;
   }
-
-  .game-button-rules {
-    background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
-    box-shadow: 0 0 32px 0 #654fab;
-  }
-
-  .game-button-rules:hover,
-  .game-button-rules:focus {
+  .game-button {
+    display: flex;
+    width: 157px;
     background: linear-gradient(90deg, #609 0%, #932a81 100%);
     box-shadow: 0 0 56px 8px #b5b5ec;
+    padding: 9px 13px;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
+  }
+
+  .game-button:hover {
+    background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
+    box-shadow: 0px 0px 20px 1px rgba;
+  }
+  .button-text {
+    width: auto;
+    height: auto;
+    fill: #ffffff;
+    transition: fill 0.3s, text-shadow 0.3s;
+  }
+  .button-text:hover,
+  .button-text:focus,
+  .button-text:active {
+    fill: #381c4f;
+  }
+
+  .game-button:hover,
+  .game-button:focus,
+  .game-button:active {
+    background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
+    box-shadow: 0 0 32px 0 #654fab;
   }
 }
 
@@ -97,34 +123,6 @@
   width: 25px;
   height: 28px;
   margin-right: 13px;
-}
-
-.game-button {
-  display: flex;
-  width: 157px;
-  // height: 47px;
-  background: linear-gradient(90deg, #609 0%, #932a81 100%);
-  box-shadow: 0 0 56px 8px #b5b5ec;
-  padding: 9px 13px;
-  border-radius: 8px;
-  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
-}
-
-.button-text {
-  width: auto;
-  height: auto;
-  fill: #ffffff;
-  transition: fill 0.3s, text-shadow 0.3s;
-}
-
-.game-button:hover .button-text {
-  fill: #381c4f;
-}
-
-.game-button:hover,
-.game-button:focus {
-  background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
-  box-shadow: 0 0 32px 0 #654fab;
 }
 
 .footer-list-general-page {
