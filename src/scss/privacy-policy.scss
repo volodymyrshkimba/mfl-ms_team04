@@ -1,3 +1,4 @@
+body,
 .bg-color {
   margin: 0;
   padding: 0;
@@ -11,36 +12,62 @@
   );
   color: #381c4f;
 }
+.page-additional-arrow-icon {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid#381c4f;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+
+  padding: 5px 7px 9px 5px;
+  margin-right: 8px;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, border-color 0.3s; /* Додаємо плавний перехід */
+}
+
+.home-link {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
 .navigate-home {
   display: flex;
   margin-right: auto;
   justify-content: start;
-}
-.home-link a {
-  margin-right: 8px;
-}
-.home-link {
-  display: flex;
   color: #381c4f;
-  margin-left: 16px;
-  align-items: center;
-  margin-bottom: 40px;
-  transition: color 0.3s;
 }
-.home-link:hover,
-.home-link:focus {
+.navigate-home:hover,
+.navigate-home:focus {
   @include gradient-text;
 }
-.page-additional-arrow-icon {
-  fill: #d1d2f480;
-  margin-right: 10px;
-  cursor: pointer;
+.icon-arrow {
+  stroke: #381c4f;
+  stroke-width: 2px;
 }
-.page-additional-arrow-icon:hover,
-.page-additional-arrow-icon:focus {
-  fill: #c5c5cd99;
-  stroke: rgba(193, 98, 241, 0.913);
+.icon-arrow:hover,
+.icon-arrow:focus {
+  @include gradient-text;
+  stroke: #932a81;
+  fill: #932a81;
+  stroke-width: 2px;
 }
+
+.home-link:hover .page-additional-arrow-icon,
+.home-link:focus .page-additional-arrow-icon {
+  background-color: #ffffff;
+  border-color: #932a81;
+}
+
+.container-rules-page {
+  width: 320px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
 .text-terms {
   font-family: 'Signika', sans-serif;
   font-weight: 400;
@@ -49,17 +76,37 @@
   margin-bottom: 40px;
 }
 
+.rules-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 .text-item {
   font-family: 'Signika', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
 }
-
 .mark-item {
   list-style: disc;
   list-style-position: outside;
   margin-left: 20px;
+}
+.articles {
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.3;
+  @include gradient-text;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.mark-container {
+  margin-bottom: 40px;
 }
 
 .terms-link-list {
@@ -67,24 +114,50 @@
   margin-bottom: 40px;
   margin-left: 10px;
 }
-
 .terms-link-list li {
   text-decoration: underline;
   color: #b5b5ec;
   position: relative;
 }
-
 .terms-link-list li:before {
   content: '•';
   color: black;
   position: absolute;
   left: -10px;
 }
-
 .terms-link-item a {
   display: block;
   color: #0000ff;
   text-decoration: none;
+}
+
+.footer-container-wrapper {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  padding: 40px 10px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #609 0%, #932a81 100%);
+}
+
+.footer-wrapper-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.rule-page {
+  text-decoration: underline;
+  color: #ffff;
+}
+
+.rule-page:hover {
+  @include gradient-text;
 }
 
 .png-icon {
@@ -93,61 +166,82 @@
   margin-right: 13px;
 }
 
+.btn {
+  display: flex;
+  width: 157px;
+  height: 47px;
+  background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
+  box-shadow: 0 0 56px 8px #b5b5ec;
+  padding: 9px 13px;
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
 .button-text {
-  width: auto;
-  height: auto;
+  width: 92px;
+  height: 29px;
   fill: #381c4f;
   transition: fill 0.3s, text-shadow 0.3s;
 }
 
-/* Стилі для екранів від 320px до 1199px */
-@media (max-width: 1199px) {
-  .container-rules-page {
-    display: flex;
-    flex-direction: column;
-    border: 0px;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 16px 0px 16px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.btn:hover .button-text {
+  fill: #ffffff;
+}
 
-  .container-general-page-footer {
-    max-width: 100%;
-    padding: 0px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.btn:hover,
+.btn:focus {
+  background: linear-gradient(90deg, #609 0%, #932a81 100%);
+  box-shadow: 0 0 32px 0 #654fab;
+}
 
-  .footer-container-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 24px 8px;
-    border-radius: 0;
-    gap: 10px;
+.footer-list-general-page {
+  display: flex;
+}
+
+.rule {
+  display: block;
+  text-decoration: underline;
+}
+
+.rule:hover {
+  @include gradient-text;
+}
+
+@media (max-width: 1999px) {
+  .rights-rules-white {
+    font-size: 12px;
+    line-height: 1.3;
     color: #ffffff;
-    background: linear-gradient(90deg, #609 0%, #932a81 100%);
+  }
+}
+@media (min-width: 1200px) {
+  .container-rules-page {
+    width: 1200px;
+    padding: 0 84px;
+    margin: 0 auto;
   }
 
   .articles {
-    font-family: 'Domine', serif;
-    font-weight: 700;
-    font-size: 24px;
+    font-size: 32px;
     line-height: 1.3;
-    @include gradient-text;
-    margin-bottom: 24px;
-    margin-left: auto;
-    margin-right: auto;
+  }
+  .rights-rules-white {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffff;
+  }
+  .container-general-page-footer {
+    width: 1200px;
+    padding: 0 84px;
+    margin: 0 auto;
+  }
+  .rights-footer {
+    font-size: 12px;
+    margin: 0 auto;
   }
 
-  .rights-rules-white {
-    font-weight: 400;
+  .rule-page {
     font-size: 14px;
-    line-height: 18.2px;
     color: #ffff;
   }
 
@@ -157,109 +251,17 @@
     align-items: center;
     gap: 10px;
   }
-
-  .game-button-rules {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 157px;
-    height: 47px;
-    cursor: pointer;
-    background: linear-gradient(90deg, #609 0%, #932a81 100%);
-    box-shadow: 0 0 56px 8px #b5b5ec;
-    padding: 9px 13px;
-    border-radius: 8px;
-    transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
-  }
-
-  .game-button-rules:hover .button-text {
-    fill: #f1f2fc;
-  }
-
-  .game-button-rules:hover,
-  .game-button-rules:focus {
-    background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
-    box-shadow: 0 0 32px 0 #654fab;
-  }
-
-  .rules-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
 }
-
-/* Стилі для екранів від 1200px і більше */
 @media (min-width: 1200px) {
-  .container-general-page-footer {
-    min-width: 1200px;
-    padding: 0 84px;
-    margin: 0 auto;
-  }
-
   .footer-container-wrapper {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    height: 76px;
+    width: 1032px;
     justify-content: space-between;
     padding: 10px 40px;
     border-radius: 24px 24px 0 0;
+    color: #ffffff;
     background: linear-gradient(90deg, #609 0%, #932a81 100%);
-    color: white;
   }
-  .articles {
-    font-size: 32px;
-    line-height: 1.3;
-  }
-  .game-button-rules {
-    background: linear-gradient(360deg, #b5b5ec 0%, #f1f2fc 100%);
-    box-shadow: 0 0 32px 0 #654fab;
-  }
-
-  .game-button-rules:hover,
-  .game-button-rules:focus {
-    background: linear-gradient(90deg, #609 0%, #932a81 100%);
-    border: 1px solid #b5b5ec;
-    box-shadow: 0 0 56px 8px #b5b5ec;
-  }
-
-  .rules-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-}
-
-.game-button-rules {
-  display: flex;
-  width: 157px;
-  height: 47px;
-  cursor: pointer;
-  background: linear-gradient(90deg, #609 0%, #932a81 100%);
-  // box-shadow: 0 0 56px 8px #b5b5ec;
-  box-shadow: 0px 0px 20px 1px #2b244240;
-  padding: 9px 13px;
-  border-radius: 8px;
-  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
-}
-
-.game-button-rules:hover .button-text,
-.game-button-rules:focus .button-text,
-.game-button-rules:active .button-text {
-  fill: #f1f2fc;
-}
-
-.footer-list-general-page {
-  display: flex;
-}
-
-.rule-page {
-  display: block;
-  text-decoration: underline;
-  color: white;
-}
-
-.rule-page:hover {
-  @include gradient-text;
 }
