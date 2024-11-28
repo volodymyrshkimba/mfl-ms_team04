@@ -3,7 +3,7 @@
   padding: 0;
   width: 100vw;
   overflow-x: hidden;
-  font-family: 'Domine', 'Signika', sans-serif;
+  font-family: 'Signika', sans-serif;
   background: linear-gradient(
     0deg,
     rgba(168, 160, 229, 0.8) 0%,
@@ -103,6 +103,7 @@
 /* Стилі для екранів від 320px до 1199px */
 @media (max-width: 1199px) {
   .container-rules-page {
+    max-width: 320px;
     display: flex;
     flex-direction: column;
     border: 0px;
@@ -192,9 +193,18 @@
 
 /* Стилі для екранів від 1200px і більше */
 @media (min-width: 1200px) {
+  .container-rules-page {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .terms-link-list {
+    margin-left: 100px;
+  }
   .container-general-page-footer {
     min-width: 1200px;
-    padding: 0 84px;
+
     margin: 0 auto;
   }
 

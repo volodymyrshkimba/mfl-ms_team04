@@ -2,6 +2,7 @@
   max-width: 320px;
   padding-top: 320px;
   padding-bottom: 389px;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   background: url('../img/hero/hero-bg-game-trailer@1x.png') no-repeat top 120px
@@ -45,6 +46,37 @@
   }
 }
 
+.video-wrapper {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  @include media(desktop) {
+    top: 96px;
+    left: 84px;
+  }
+}
+
+.video-wrapper::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  box-shadow: inset 0 0 20px 20px #6650ad;
+}
+
+.video-wrapper video {
+  width: 320px;
+  height: 184px;
+  display: block;
+  @include media(desktop) {
+    width: 504px;
+    height: 288px;
+  }
+}
+
 .hero-title {
   font-family: 'Domine', serif;
   font-weight: 700;
@@ -52,6 +84,9 @@
   color: #e6e7f9;
   margin-bottom: 20px;
   @include media(desktop) {
+    position: relative;
+    pointer-events: none;
+    z-index: 1;
     max-width: 449px;
     margin-bottom: 32px;
     @include font(32, 41.6);
